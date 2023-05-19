@@ -26,53 +26,53 @@
 
 		<script>
 
-			// let's create some data
+			// my life in data
 			const data = [
 				{
 					'id': 0,
 					'title':'Hello Osaka',
-					'lat': 34.6937,
-					'lon': 135.5023,
+					'latitude': 34.6937,
+					'longitude': 135.5023,
 					'zoom': 10,
 					'image': 'images/yohbaby.JPG'
 				},
 				{
 					'id': 1,
 					'title':'Hello Cali',
-					'lat': 3.429729892370133, 
-					'lon': -76.54106493872214,
+					'latitude': 3.429729892370133, 
+					'longitude': -76.54106493872214,
 					'zoom': 16,
 					'image': 'images/yoh cali.JPG'
 				},
 				{
 					'id': 2,
 					'title':'Hello Bangkok',
-					'lat': 13.7563,
-					'lon': 100.5018,
+					'latitude': 13.7563,
+					'longitude': 100.5018,
 					'zoom': 14,
 					'image': 'images/yohthai.JPG'
 				},
 				{
 					'id': 3,
 					'title':'Hello Tokyo',
-					'lat': 35.687998301985985, 
-					'lon': 139.5297974778005,
+					'latitude': 35.687998301985985, 
+					'longitude': 139.5297974778005,
 					'zoom': 16,
 					'image':'images/yohICU.jpg'
 				},
 				{
 					'id': 4,
 					'title':'Hello LA',
-					'lat': 34.06898317638355, 
-					'lon': -118.44538494718738,
+					'latitude': 34.06898317638355, 
+					'longitude': -118.44538494718738,
 					'zoom': 15,
 					'image':'images/yoh ucla.jpg'
 				},
 				{
 					'id': 5,
 					'title':'Hello Reitaku',
-					'lat': 35.83300067323384, 
-					'lon': 139.95536520692943,
+					'latitude': 35.83300067323384, 
+					'longitude': 139.95536520692943,
 					'zoom': 16,
 					'image':'images/yoh reitaku.jpg'
 				},
@@ -95,7 +95,7 @@
 			data.forEach(function(item,index){
 				console.log(item,index)
 				// add marker to map
-				L.marker([item.lat,item.lon]).addTo(map)
+				L.marker([item.latitude,item.longitude]).addTo(map)
 					.bindPopup(item.title)
 
 				// add marker to sidebar
@@ -105,7 +105,7 @@
 			// function to "fly" to each location
 			function goto(id){
 				console.log(id)
-				map.flyTo([data[id].lat,data[id].lon],data[id].zoom)
+				map.flyTo([data[id].latitude,data[id].longitude],data[id].zoom)
 			}
 
 		</script>	
